@@ -1,0 +1,19 @@
+# Rust
+rust/target/
+
+# Zed packaging
+.vendor/
+.zed/
+.zed-pack/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+.direnv/
+
+# Scratch space
+tmp/
+temp/
+
+.DS_Store
