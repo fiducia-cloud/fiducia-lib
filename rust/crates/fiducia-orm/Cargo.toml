@@ -1,0 +1,20 @@
+[package]
+name = "fiducia-orm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Fiducia SeaORM data-access boundary crate: role-aware connections (read-only web tier, read-write API tier) and named query functions for the shared schema"
+
+[lib]
+path = "src/lib.rs"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+sea-orm = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true }

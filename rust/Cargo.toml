@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["crates/fiducia-orm"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+license = "MIT"
+repository = "https://github.com/fiducia-cloud/fiducia-lib"
+
+[workspace.dependencies]
+# Matches the sea-orm pin used by the fiducia servers (fiducia-customer.rs).
+# sea-orm is the only direct data-layer dependency; its sqlx-postgres feature
+# is the driver — never add a direct sqlx dependency.
+sea-orm = { version = "1.1", default-features = false, features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+] }
+tokio = { version = "1", features = ["macros", "rt"] }
