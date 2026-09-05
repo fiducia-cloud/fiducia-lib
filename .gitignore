@@ -17,3 +17,7 @@ tmp/
 temp/
 
 .DS_Store
+
+# Repository-local temporary data and authorized Git worktrees
+tmp/worktrees
+temp/worktrees
