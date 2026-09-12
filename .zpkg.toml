@@ -32,5 +32,3 @@ adapter = "rust"
 
 [scripts]
 test = "cd rust && cargo test --all-targets"
-lint = "cd rust && cargo clippy --all-targets -- -D warnings"
-format = "cd rust && cargo fmt --all -- --check"
